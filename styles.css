@@ -180,6 +180,26 @@ td {
   vertical-align: middle;
 }
 
+.rank-cell {
+  width: 3.5rem;
+  padding-left: 0;
+  text-align: center;
+}
+
+.rank-number {
+  display: inline-grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid #edcfcc;
+  border-radius: 50%;
+  color: var(--deep-red);
+  background: #fff7f5;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
 .gift-cell {
   display: flex;
   min-width: 285px;
@@ -344,6 +364,7 @@ footer span {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem 1rem;
+    position: relative;
     padding: 1rem 0;
   }
 
@@ -355,10 +376,19 @@ footer span {
     padding: 0;
   }
 
+  .rank-cell {
+    position: absolute;
+    z-index: 1;
+    top: 1.35rem;
+    left: 0;
+    width: auto;
+  }
+
   .gift-cell {
     grid-column: 1 / -1;
     min-width: 0;
     padding-bottom: 0.3rem;
+    padding-left: 2.5rem;
   }
 
   .description-cell {
